@@ -4,7 +4,7 @@ import React from 'react';
 let price = 45;
 
 //Functional componet
-function ProductCard() {
+function ComponentExample() {
     return (
         <div>
             <h3>Drone Eachine E33C</h3>
@@ -17,7 +17,7 @@ function ProductCard() {
 }
 
 //Class component
-// class ProductCard extends React.Component {
+// class ComponentExample extends React.Component {
 //     render() {
 //         return (
 //             <div>
@@ -32,7 +32,7 @@ function ProductCard() {
 // }
 
 // With Erow function
-// const ProductCard = () => (
+// const ComponentExample = () => (
 //     <div>
 //         <h3>Product 1</h3>
 //         <div>
@@ -42,4 +42,4 @@ function ProductCard() {
 //     </div>
 // )
 
-export default ProductCard
+// export default ComponentExample
