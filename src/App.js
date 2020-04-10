@@ -1,28 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import ProductList from './ProductList';
-import Timer from './Timer';
+import React, { Fragment } from 'react';
+import Header from './header/Header';
+import ProductList from './product-list/ProductList';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <Fragment>
+        <Header />
         <ProductList />
-        <Timer />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </Fragment>
     </div>
   );
 }

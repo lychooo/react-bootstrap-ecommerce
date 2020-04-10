@@ -1,15 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import App from './App';
 // import App from './App';
-import ProductList from './ProductList';
-import data from './data';
 // import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <ProductList product={data[0]} />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
