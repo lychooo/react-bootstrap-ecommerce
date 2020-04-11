@@ -1,13 +1,13 @@
-import e33c from './images/eachine-e33c-1.jpg'
-import h8 from './images/eachine-h8-mini-750x750-1.jpg'
-import h8s from './images/eachine-h8s-3d-01-1.jpg'
-import h8w from './images/eachine-h8w-yellow-1.jpg'
-import h20 from './images/jjrc-h20-nano-hexacopter-650x650-01.jpg'
+import e33c from './images/eachine-e33c-650.jpg';
+import h8 from './images/eachine-h8-mini-650.jpg';
+import h8s from './images/eachine-h8s-3d-650.jpg';
+import h8w from './images/eachine-h8w-yellow-650.jpg';
+import h20 from './images/jjrc-h20-nano-hexacopter-650.jpg';
 
 export default [
     {
         id: 'e33c',
-        title: 'Drone E33C With 2MP Camera',
+        title: 'Drone Eachine E33C',
         price: 33.99,
         brand: 'Eachine',
         image: e33c
@@ -39,5 +39,12 @@ export default [
         price: 15.99,
         brand: 'Eachine',
         image: h20
+    },
+    {
+        id: 'E50',
+        title: 'Drone Eachine E50',
+        price: 35.99,
+        brand: 'Eachine',
+        image: e33c
     }
 ]

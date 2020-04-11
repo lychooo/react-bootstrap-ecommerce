@@ -1,19 +1,16 @@
-.App-logo {
-  height: 5vmin;
-  pointer-events: none;
+.carousel-caption {
+    color: white;
+    background: rgba(52, 58, 64, 0.7);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 8vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.carousel-control-next-icon, 
+.carousel-control-prev-icon {
+    background-color: #343a40;
+    width: 2em;
+    height: 2em;
 }
 
-.App-link {
-  color: #61dafb;
+.carousel-control-next, 
+.carousel-control-prev {
+
 }

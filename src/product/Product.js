@@ -1,5 +1,6 @@
 import React from 'react';
-import './product.css';
+// import styles from './styles.module.css';
+import './product.css'
 import PropTypes from 'prop-types';
 
 class Product extends React.Component {

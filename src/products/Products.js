@@ -1,16 +1,16 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import Product from '../product/Product'
-import './product-list.css';
+import ProductCard from '../ProductCard/ProductCard'
+import './products.css';
 import data from '../data';
 
 const renderProduct = (products) => {
     return products.map(product => {
-        return (<Product key={product.id} product={product} />)
+        return (<ProductCard key={product.id} product={product} />)
     })
 }
 
-class ProductList extends React.Component {
+class Products extends React.Component {
     constructor(props) {
         super(props)
     }
@@ -24,12 +24,12 @@ class ProductList extends React.Component {
     }
 }
 
-ProductList.defaultProps = {
+Products.defaultProps = {
     products: []
 }
 
-ProductList.propTypes = {
+Products.propTypes = {
     products: PropTypes.array.isRequired
 }
 
-export default ProductList
+export default Products

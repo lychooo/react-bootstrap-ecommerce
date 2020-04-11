@@ -1,0 +1,20 @@
+.product {
+    background: white;
+    color: #282c34;
+    margin: 0.5em;
+    padding: 1em;
+}
+
+.product-image {
+    max-width: 16em;
+    min-height: auto;
+}
+
+.product-price {
+    font-weight: lighter;
+}
+
+.product-price span {
+    color: rgb(240, 58, 58);
+    font-weight: bold;
+}

@@ -3,7 +3,8 @@
 }
 
 .product-list {
-  background-color: #282c34;
+  /* background-color: #282c34; */
+  background-color: #e6e6e6;
   min-height: 100vh;
   flex-wrap: wrap;
   display: flex;

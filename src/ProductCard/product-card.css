@@ -1,0 +1,8 @@
+.product-price {
+    font-weight: lighter;
+}
+
+.product-price span {
+    color: rgb(240, 58, 58);
+    font-weight: bold;
+}
