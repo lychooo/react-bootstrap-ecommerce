@@ -1,0 +1,12 @@
+.card {
+    margin: 0 auto;
+}
+.card-text {
+    display: block;
+    font-weight: lighter;
+}
+
+.card-text span {
+    color: rgb(240, 58, 58);
+    font-weight: bold;
+}

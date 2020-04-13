@@ -1,7 +1,7 @@
 import React from 'react';
-// import styles from './styles.module.css';
-import './product.css'
+import './Product.css'
 import PropTypes from 'prop-types';
+// import { LinkContainer } from 'react-router-bootstrap'
 
 class Product extends React.Component {
     constructor(props) {

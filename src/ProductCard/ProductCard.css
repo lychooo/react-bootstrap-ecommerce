@@ -1,8 +1,11 @@
-.product-price {
+.product-card {
+    margin: 0.25em;
+}
+.card-text {
     font-weight: lighter;
 }
 
-.product-price span {
+.card-text span {
     color: rgb(240, 58, 58);
     font-weight: bold;
 }

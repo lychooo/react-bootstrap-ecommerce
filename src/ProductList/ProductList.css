@@ -1,11 +1,7 @@
 .product-list {
-  text-align: center;
-}
-
-.product-list {
   /* background-color: #282c34; */
   background-color: #e6e6e6;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   flex-wrap: wrap;
   display: flex;
   flex-direction: row;
@@ -13,4 +9,5 @@
   justify-content: center;
   font-size: calc(10px + 1vmin);
   /* color: white; */
+  padding: 2em;
 }
