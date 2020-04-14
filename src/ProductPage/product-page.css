@@ -1,6 +1,24 @@
+.product-page {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.product-gallery {
+    max-width: 30rem;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    /* border-radius: .125rem; */
+}
+
 .card {
     margin: 0 auto;
 }
+
 .card-text {
     display: block;
     font-weight: lighter;
@@ -9,4 +27,14 @@
 .card-text span {
     color: rgb(240, 58, 58);
     font-weight: bold;
+    font-size: calc(10px + 2vmin);
+}
+
+.product-page button {
+    margin: 0.5em;
+}
+
+.product-gallery,
+.product-price {
+    margin: 0.5rem;
 }

@@ -1,5 +1,6 @@
 .product-card {
     margin: 0.25em;
+    box-shadow: 1px 1px 4px 1px rgba(153, 153, 153, .2);
 }
 .card-text {
     font-weight: lighter;

@@ -15,7 +15,9 @@ class ProductCard extends React.Component {
         return (
             <div className="product-card">
                 <Card className="product-card" style={{ width: '12rem' }}>
-                    <Card.Img variant="top" src={product.image} />
+                    <LinkContainer to={`/eachine/${product.id}`}>
+                        <Card.Img variant="top" src={product.image} />
+                    </LinkContainer>
                     <Card.Body>
                         <Card.Title>{product.title}</Card.Title>
                         <Card.Text>Price: <span> ${product.price}</span></Card.Text>

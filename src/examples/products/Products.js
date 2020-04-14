@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ProductCard from '../ProductCard/ProductCard'
+import ProductCard from '../../ProductCard/ProductCard'
 import './products.css';
-import data from '../data';
+import data from '../../data';
 
 const renderProduct = (products) => {
     return products.map(product => {

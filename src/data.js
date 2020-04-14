@@ -11,6 +11,7 @@ export default [
         price: 33.99,
         brand: 'Eachine',
         image: e33c,
+        gallery: [e33c, e33c, e33c],
         description: `
         Brand Name: Eachine
         Item NO.: E58
@@ -33,6 +34,7 @@ export default [
         price: 13.99,
         brand: 'Eachine',
         image: h8,
+        gallery: [h8, h8, h8],
         description: `
         Brand Name: Eachine
         Item NO.: E58
@@ -55,6 +57,7 @@ export default [
         price: 16.99,
         brand: 'Eachine',
         image: h8s,
+        gallery: [h8s, h8s, h8s],
         description: `
         Brand Name: Eachine
         Item NO.: E58
@@ -77,6 +80,7 @@ export default [
         price: 24.99,
         brand: 'Eachine',
         image: h8w,
+        gallery: [h8w, h8w, h8w],
         description: `
         Brand Name: Eachine
         Item NO.: E58
@@ -99,6 +103,7 @@ export default [
         price: 15.99,
         brand: 'Eachine',
         image: h20,
+        gallery: [h20, h20, h20],
         description: `
         Brand Name: Eachine
         Item NO.: E58
@@ -121,6 +126,7 @@ export default [
         price: 35.99,
         brand: 'Eachine',
         image: e33c,
+        gallery: [e33c, e33c, e33c],
         description: `
         Brand Name: Eachine
         Item NO.: E58
@@ -143,6 +149,7 @@ export default [
         price: 33.99,
         brand: 'Eachine',
         image: e33c,
+        gallery: [e33c, e33c, e33c],
         description: `
         Brand Name: Eachine
         Item NO.: E58
@@ -165,6 +172,7 @@ export default [
         price: 13.99,
         brand: 'Eachine',
         image: h8,
+        gallery: [h8, h8, h8],
         description: `
         Brand Name: Eachine
         Item NO.: E58
@@ -187,6 +195,7 @@ export default [
         price: 16.99,
         brand: 'Eachine',
         image: h8s,
+        gallery: [h8s, h8s, h8s],
         description: `
         Brand Name: Eachine
         Item NO.: E58
@@ -209,6 +218,7 @@ export default [
         price: 24.99,
         brand: 'Eachine',
         image: h8w,
+        gallery: [h8w, h8w, h8w],
         description: `
         Brand Name: Eachine
         Item NO.: E58
@@ -231,6 +241,7 @@ export default [
         price: 15.99,
         brand: 'Eachine',
         image: h20,
+        gallery: [h20, h20, h20],
         description: `
         Brand Name: Eachine
         Item NO.: E58
@@ -253,6 +264,7 @@ export default [
         price: 35.99,
         brand: 'Eachine',
         image: e33c,
+        gallery: [e33c, e33c, e33c],
         description: `
         Brand Name: Eachine
         Item NO.: E58

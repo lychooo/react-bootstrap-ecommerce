@@ -4,11 +4,13 @@ import PropTypes from 'prop-types';
 import './product-page.css';
 import data from '../data';
 
+// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// import { LinkContainer } from "react-router-bootstrap";
+
 const renderGallery = (gallery) => {
-    let index = 1;
     return gallery.map(image => {
         return (
-            <Carousel.Item key={`image${index++}`}>
+            <Carousel.Item>
                 <img
                     className="d-block w-100"
                     src={image}
@@ -38,11 +40,12 @@ class ProductPage extends React.Component {
                 </div>
                 <div className="product-price">
                     <Card style={{ width: '22rem' }}>
+                        <Card.Img variant="top" src={product.image} />
                         <Card.Body>
                             <Card.Title>{product.title}</Card.Title>
+                            <Card.Text>{product.description}</Card.Text>
                             <Card.Text>Price: <span> ${product.price}</span></Card.Text>
                             <Button variant="primary">Add to Card</Button>
-                            <Button variant="primary">Buy Now</Button>
                         </Card.Body>
                     </Card>
                 </div>

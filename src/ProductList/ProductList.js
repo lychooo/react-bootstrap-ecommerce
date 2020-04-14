@@ -28,4 +28,4 @@ ProductList.propTypes = {
     products: PropTypes.array.isRequired
 }
 
-export default ProductList
+export default ProductList;
