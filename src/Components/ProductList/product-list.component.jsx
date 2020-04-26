@@ -13,12 +13,11 @@ const renderProduct = (products) => {
 class ProductList extends React.Component {
 
     render() {
-        console.log(data)
+        // console.log(data)
         return (
             <div className="product-list">
                 {renderProduct(data)}
             </div>
-
         );
     }
 }
