@@ -41,11 +41,11 @@ const Navigation = ({ currentUser }) => {
                         {currentUser ?
                             (
                                 <LinkContainer to="/">
-                                    <Nav.Link onClick={() => auth.signOut()}>Logout</Nav.Link>
+                                    <Nav.Link onClick={() => auth.signOut()}>Sing out</Nav.Link>
                                 </LinkContainer>
                             ) : (
                                 < LinkContainer to="/login">
-                                    <Nav.Link>Login</Nav.Link>
+                                    <Nav.Link>Sing in</Nav.Link>
                                 </LinkContainer>
                             )
                         }

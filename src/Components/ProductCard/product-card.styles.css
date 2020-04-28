@@ -2,6 +2,7 @@
     margin: 0.25em;
     box-shadow: 1px 1px 4px 1px rgba(153, 153, 153, .2);
 }
+
 .card-text {
     font-weight: lighter;
 }
@@ -9,4 +10,19 @@
 .card-text span {
     color: rgb(240, 58, 58);
     font-weight: bold;
+}
+
+.card-img-top {
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .product-card {
+        margin: 0.25em;
+        max-width: 150px;
+    }
+
+    .btn {
+        max-width: 100%;
+    }
 }

@@ -1,0 +1,14 @@
+.page-not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-not-found {
+    padding: 1em 1em 0.5em 1em;
+}
+
+.txt-page-not-found {
+    padding: 0.5em 1em 1em 1em;
+}
+

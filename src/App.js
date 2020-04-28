@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from 'react';
+import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -60,8 +60,8 @@ class App extends React.Component {
             <Switch>
               <Route path="/" exact component={Home} />
               <Route path="/drones" component={Drones} />
-              <Route exact path="/login" render={() => this.props.currentUser ? (<Redirect to='/' />) : (<Login />)} />
-              <Route exact path="/register" render={() => this.props.currentUser ? (<Redirect to='/' />) : (<Register />)} />
+              <Route exact path="/login" render={() => currentUser ? (<Redirect to='/' />) : (<Login />)} />
+              <Route exact path="/register" render={() => currentUser ? (<Redirect to='/' />) : (<Register />)} />
               <Route path="/eachine/:id" component={ProductPage} />
               <Route path="*" component={Page404} />
             </Switch>

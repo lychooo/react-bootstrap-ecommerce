@@ -11,3 +11,11 @@
   /* color: white; */
   padding: 2em;
 }
+
+@media (max-width: 600px) {
+
+  .product-list {
+    padding: 0;
+  }
+
+}

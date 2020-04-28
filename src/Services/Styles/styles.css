@@ -3,3 +3,11 @@
     margin: 0 auto;
     padding: 2em;
 }
+
+/* .btn {
+    min-width: 165px;
+} */
+
+.btn-primary {
+    margin-right: 15px;
+}

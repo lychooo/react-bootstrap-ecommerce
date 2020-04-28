@@ -4,6 +4,8 @@ import { LinkContainer } from "react-router-bootstrap";
 
 import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
 
+import '../Styles/styles.css';
+
 
 class Login extends React.Component {
     constructor(props) {
@@ -72,7 +74,7 @@ class Login extends React.Component {
 
                 <Button variant="primary" type="submit">Sing in</Button>
 
-                <Button variant="primary" type="button" onClick={signInWithGoogle}>Sing in with Google</Button>
+                <Button variant="dark" type="button" onClick={signInWithGoogle}>Sing in with Google</Button>
 
                 <div style={{marginTop: '1em'}}>
                     <span>Don't Have an Account? 
