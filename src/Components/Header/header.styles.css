@@ -5,20 +5,8 @@
 
 .carousel-control-next-icon, 
 .carousel-control-prev-icon {
-    background-color: #343a40;
+    /* background-color: #343a40; */
     width: 2em;
     height: 2em;
-}
-
-.carousel-control-prev-icon .sr-only {
-    color: #343a40;
-}
-
-.carousel-control-next, 
-.carousel-control-prev {
-
-}
-
-.carousel-indicators li {
-    
+    outline: black;
 }
