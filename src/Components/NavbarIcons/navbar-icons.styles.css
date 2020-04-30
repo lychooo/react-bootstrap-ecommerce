@@ -1,0 +1,32 @@
+.navbar-icons {
+    display: flex;
+}
+
+.navbar-icon {
+    color: white;
+    margin: 0 0.5em;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.cart-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-count {
+    position: absolute;
+    bottom: 0.8em;
+    right: 1.2em;
+    font-size: 0.7em;
+    color: white;
+    background-color: #007bff;
+    padding: 0 0.2em;
+    border-radius: 35%;
+    cursor: pointer;
+}
+
+
+

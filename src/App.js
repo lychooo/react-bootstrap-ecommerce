@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { connect } from 'react-redux';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 
 import Navigation from './Components/Navigation/navigation.component';
@@ -11,36 +12,28 @@ import Login from './Pages/Login/login.component';
 import Register from './Pages/Register/register.component';
 import Page404 from './Pages/Page404/page-404.component';
 import ItemsOverview from './Components/ItemsOverview/items-overview.component';
+import { setCurrentUser } from './redux/user/user.action';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      currentUser: null
-    }
-  }
 
   unsubscribeFromAuth = null;
 
   componentDidMount() {
+    const {setCurrentUser} = this.props; 
+
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
 
         userRef.onSnapshot(snapShot => {
-          this.setState({
-            currentUser: {
+          setCurrentUser ({
               id: snapShot.id,
               ...snapShot.data()
-            }
-          });
-
-          // console.log(this.state)
+            });
         });
       }
 
-      this.setState({ currentUser: userAuth });
+      setCurrentUser(userAuth);
     });
   }
 
@@ -49,14 +42,13 @@ class App extends React.Component {
   }
 
   render() {
-    const { currentUser } = this.state;
-    // console.log(currentUser)
+    const { currentUser } = this.props;
 
     return (
       <div className="App">
         <Router>
           <Fragment>
-            <Navigation currentUser={currentUser} />
+            <Navigation />
             <Switch>
               <Route path="/" exact component={Home} />
               <Route path="/drones" component={ItemsOverview} />
@@ -72,4 +64,12 @@ class App extends React.Component {
   };
 };
 
-export default App;
+const mapStateToProps = ({ user }) => ({
+  currentUser: user.currentUser
+})
+
+const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

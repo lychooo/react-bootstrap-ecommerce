@@ -2,13 +2,16 @@ import React, { Fragment } from 'react';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
+import { connect } from 'react-redux';
 
 import { auth } from '../../firebase/firebase.utils';
 
+import NavbarIcons from '../NavbarIcons/navbar-icons.component';
+import CartDropdown from '../CartDropdown/cart-dropdown.component';
 import Logo from '../logo/logo.component';
-import './navigation.styles.css'
+import './navigation.styles.css';
 
-const Navigation = ({ currentUser }) => {
+const Navigation = ({ currentUser, hidden }) => {
     // console.log(currentUser)
     return (
         <Fragment>
@@ -37,6 +40,9 @@ const Navigation = ({ currentUser }) => {
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                         <Button variant="outline-light">Search</Button>
                     </Form>
+                    
+                    <NavbarIcons />
+
                     <Nav>
                         {currentUser ?
                             (
@@ -52,8 +58,16 @@ const Navigation = ({ currentUser }) => {
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
+            
+            {hidden ? null : <CartDropdown />}
+            
         </Fragment >
     )
-}
+};
 
-export default Navigation
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+    currentUser,
+    hidden
+});
+
+export default connect(mapStateToProps)(Navigation);
