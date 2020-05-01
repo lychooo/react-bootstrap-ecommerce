@@ -3,13 +3,10 @@
     box-shadow: 1px 1px 4px 1px rgba(153, 153, 153, .2);
 }
 
-.card-text {
-    font-weight: lighter;
-}
-
-.card-text span {
+.product-cart-page {
     color: rgb(240, 58, 58);
     font-weight: bold;
+    font-size: calc(12px + 1.5vmin);
 }
 
 .card-img-top {

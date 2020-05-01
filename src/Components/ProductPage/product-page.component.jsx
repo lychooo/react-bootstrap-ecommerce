@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
+
 import { Card, Button, Carousel, Tabs, Tab, Image } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+
 import './product-page.styles.css';
 import data from '../../Data/data';
 
@@ -16,8 +18,8 @@ const renderGallery = (gallery) => {
                 />
             </Carousel.Item>
         )
-    })
-}
+    });
+};
 
 const renderSingleImage = (images) => {
     let index = 1;
@@ -25,33 +27,32 @@ const renderSingleImage = (images) => {
         return (
             <Image key={`image${index++}`} src={image} fluid />
         )
-    })
-}
-
+    });
+};
 
 class ProductPage extends React.Component {
 
     render() {
-        const product = data.filter(item => {
-            return item.id === this.props.match.params.id
+        const currentProduct = data.filter(product => {
+            return product.id === this.props.match.params.id
         })[0];
-        console.log(product)
+        console.log(currentProduct)
 
         return (
             <Fragment>
                 <div className="product-page">
-                    <span className="page-title">category / {product.category}</span>
+                    <span className="page-title">category / {currentProduct.category}</span>
                     <div className="product-page-header">
                         <div className="product-gallery">
                             <Carousel>
-                                {renderGallery(product.gallery)}
+                                {renderGallery(currentProduct.gallery)}
                             </Carousel>
                         </div>
                         <div className="product-price">
                             <Card style={{ width: '22rem' }}>
                                 <Card.Body>
-                                    <Card.Title>{product.title}</Card.Title>
-                                    <Card.Text>Price: <span> ${product.price}</span></Card.Text>
+                                    <Card.Title>{currentProduct.title}</Card.Title>
+                                    <Card.Text>Price: <span className='product-page-price'> ${currentProduct.price}</span></Card.Text>
                                     <Button variant="primary">Add to Card</Button>
                                     <Button variant="secondary">Buy Now</Button>
                                 </Card.Body>
@@ -66,7 +67,7 @@ class ProductPage extends React.Component {
                                 <Tab eventKey="home" title="Description">
                                     <div>
                                         <h5>Description</h5>
-                                        {product.description}
+                                        {currentProduct.description}
                                     </div>
                                 </Tab>
                                 <Tab eventKey="profile" title="Shipping">
@@ -89,7 +90,7 @@ class ProductPage extends React.Component {
                         </div>
 
                         <div className="single-image">
-                            {renderSingleImage(product.gallery)}
+                            {renderSingleImage(currentProduct.gallery)}
                         </div>
 
                     </div>
@@ -97,7 +98,7 @@ class ProductPage extends React.Component {
             </Fragment>
         )
     }
-}
+};
 
 ProductPage.defaultProps = {
     title: 'Product',
