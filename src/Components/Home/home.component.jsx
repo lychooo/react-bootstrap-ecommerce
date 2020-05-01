@@ -11,6 +11,6 @@ function Home() {
         <ProductList />
     </Fragment>
   );
-}
+};
 
 export default Home;

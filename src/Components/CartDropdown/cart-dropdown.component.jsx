@@ -1,17 +1,26 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { connect } from 'react-redux'
 
 import { Button } from 'react-bootstrap';
 
+import ProductAddedToCart from '../ProductAddedToCart/product-added-to-cart.component';
+
 import './cart-dropdown.styles.css';
 
-const CartDropdown = () => (
+const CartDropdown = ({ cartProducts }) => (
     <div className='cart-dropdown'>
-        <div className='cart-items'/>
+        <div className='cart-products' />
+        {cartProducts.map(cartProduct => 
+            <ProductAddedToCart key={cartProduct.id} product={cartProduct} />)}
         <Link to='/'>
             <Button variant="primary" type="submit">Go to Checkout</Button>
         </Link>
     </div>
 );
 
-export default CartDropdown;
+const mapStateToProps = ({ cart: { cartProducts } }) => ({
+    cartProducts
+})
+
+export default connect(mapStateToProps)(CartDropdown);

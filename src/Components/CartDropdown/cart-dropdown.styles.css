@@ -1,11 +1,11 @@
 .cart-dropdown {
     position: absolute;
-    width: 240px;
+    width: 250px;
     /* height: 340px; */
     height: auto;
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 20px;
     border: 1px solid #007bff;
     background-color: white;
     top: 80px;
@@ -13,7 +13,7 @@
     z-index: 5;
 }
 
-.cart-items {
+.cart-products {
     /* height: 240px; */
     height: auto;
     display: flex;

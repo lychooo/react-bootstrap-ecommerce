@@ -1,4 +1,6 @@
 import React, { Fragment } from 'react';
+import { connect } from 'react-redux';
+import { addProduct } from '../../redux/cart/cart.actions';
 
 import { Card, Button, Carousel, Tabs, Tab, Image } from 'react-bootstrap';
 import PropTypes from 'prop-types';
@@ -33,27 +35,28 @@ const renderSingleImage = (images) => {
 class ProductPage extends React.Component {
 
     render() {
-        const currentProduct = data.filter(product => {
-            return product.id === this.props.match.params.id
+        const product = data.filter(currentProduct => {
+            return currentProduct.id === this.props.match.params.id
         })[0];
-        console.log(currentProduct)
-
+        
+        const addProduct = this.props.addProduct;    
+        
         return (
             <Fragment>
                 <div className="product-page">
-                    <span className="page-title">category / {currentProduct.category}</span>
+                    <span className="page-title">category / {product.category}</span>
                     <div className="product-page-header">
                         <div className="product-gallery">
                             <Carousel>
-                                {renderGallery(currentProduct.gallery)}
+                                {renderGallery(product.gallery)}
                             </Carousel>
                         </div>
                         <div className="product-price">
                             <Card style={{ width: '22rem' }}>
                                 <Card.Body>
-                                    <Card.Title>{currentProduct.title}</Card.Title>
-                                    <Card.Text>Price: <span className='product-page-price'> ${currentProduct.price}</span></Card.Text>
-                                    <Button variant="primary">Add to Card</Button>
+                                    <Card.Title>{product.title}</Card.Title>
+                                    <Card.Text>Price: <span className='product-page-price'> ${product.price}</span></Card.Text>
+                                    <Button variant="primary" onClick={() => addProduct(product)}>Add to Card</Button>
                                     <Button variant="secondary">Buy Now</Button>
                                 </Card.Body>
                             </Card>
@@ -67,7 +70,7 @@ class ProductPage extends React.Component {
                                 <Tab eventKey="home" title="Description">
                                     <div>
                                         <h5>Description</h5>
-                                        {currentProduct.description}
+                                        {product.description}
                                     </div>
                                 </Tab>
                                 <Tab eventKey="profile" title="Shipping">
@@ -90,7 +93,7 @@ class ProductPage extends React.Component {
                         </div>
 
                         <div className="single-image">
-                            {renderSingleImage(currentProduct.gallery)}
+                            {renderSingleImage(product.gallery)}
                         </div>
 
                     </div>
@@ -116,5 +119,9 @@ ProductPage.propTypes = {
     gallery: PropTypes.string
 }
 
-export default ProductPage;
+const mapDispatchToProps = dispatch => ({
+    addProduct: product => dispatch(addProduct(product))
+});
+
+export default connect(null, mapDispatchToProps)(ProductPage);
 
