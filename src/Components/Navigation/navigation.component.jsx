@@ -3,8 +3,11 @@ import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-boots
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
 import { auth } from '../../firebase/firebase.utils';
+import { selectCartHidden } from '../../redux/cart/cart.selectors';
+import { selectCurrentUser } from '../../redux/user/user.selectors';
 
 import NavbarIcons from '../NavbarIcons/navbar-icons.component';
 import CartDropdown from '../CartDropdown/cart-dropdown.component';
@@ -65,9 +68,9 @@ const Navigation = ({ currentUser, hidden }) => {
     )
 };
 
-const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
-    currentUser,
-    hidden
+const mapStateToProps = createStructuredSelector ({
+    currentUser: selectCurrentUser,
+    hidden: selectCartHidden
 });
 
 export default connect(mapStateToProps)(Navigation);
