@@ -24,6 +24,18 @@
     width: 23%;
 }
 
+.product-checkout-quantity {
+    display: flex;
+}
+
+.cart-value {
+    margin: 0 10px;
+}
+
+.cart-arrow {
+    cursor: pointer;
+}
+
 .product-checkout-price {
     padding-left: 20px;
 }

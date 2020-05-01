@@ -11,5 +11,23 @@ export const addProductToCart = (cartProducts, cartProductToAdd) => {
         );
     };
 
-    return [...cartProducts, { ...cartProductToAdd, quantity: 1}];
+    return [...cartProducts, { ...cartProductToAdd, quantity: 1 }];
+};
+
+export const decreaseProductFromCart = (cartProducts, cartProductsToDecrease) => {
+    const existingCartProduct = cartProducts.find(cartProduct => {
+        return cartProduct.id === cartProductsToDecrease.id;
+    });
+
+    if (existingCartProduct.quantity === 1) {
+        return cartProducts.filter(
+            cartProduct => cartProduct.id !== cartProductsToDecrease.id
+        )
+    };
+
+    return cartProducts.map(cartProduct =>
+        cartProduct.id === cartProductsToDecrease.id
+            ? { ...cartProduct, quantity: cartProduct.quantity - 1 }
+            : cartProduct
+    )
 };
