@@ -13,6 +13,8 @@ import Login from './Pages/Login/login.component';
 import Register from './Pages/Register/register.component';
 import Page404 from './Pages/Page404/page-404.component';
 import ProductsCategory from './Components/ProductsCategory/products-category.component';
+import Checkout from './Pages/Checkout/checkout.component';
+
 import { setCurrentUser } from './redux/user/user.action';
 import { selectCurrentUser } from './redux/user/user.selectors'
 
@@ -54,6 +56,7 @@ class App extends React.Component {
             <Switch>
               <Route path="/" exact component={Home} />
               <Route path="/drones" component={ProductsCategory} />
+              <Route exact path="/checkout" component={Checkout} />
               <Route exact path="/login" render={() => currentUser ? (<Redirect to='/' />) : (<Login />)} />
               <Route exact path="/register" render={() => currentUser ? (<Redirect to='/' />) : (<Register />)} />
               <Route path="/eachine/:id" component={ProductPage} />
