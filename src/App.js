@@ -14,9 +14,12 @@ import Register from './Pages/Register/register.component';
 import Page404 from './Pages/Page404/page-404.component';
 import ProductsCategory from './Components/ProductsCategory/products-category.component';
 import Checkout from './Pages/Checkout/checkout.component';
+import Footer from './Components/Footer/footer.component';
 
 import { setCurrentUser } from './redux/user/user.action';
-import { selectCurrentUser } from './redux/user/user.selectors'
+import { selectCurrentUser } from './redux/user/user.selectors';
+
+import './App.css';
 
 class App extends React.Component {
 
@@ -62,6 +65,7 @@ class App extends React.Component {
               <Route path="/eachine/:id" component={ProductPage} />
               <Route path="*" component={Page404} />
             </Switch>
+            <Footer />
           </Fragment>
         </Router>
       </div >

@@ -1,21 +1,17 @@
 .product-list {
-  /* background-color: #282c34; */
   background-color: #e6e6e6;
-  /* min-height: 100vh; */
   flex-wrap: wrap;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 1vmin);
-  /* color: white; */
   padding: 2em;
 }
 
 @media (max-width: 600px) {
 
   .product-list {
-    padding: 0;
+    padding: 1em 0;
   }
 
 }

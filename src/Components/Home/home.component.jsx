@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../Header/header.component';
 import ProductList from '../ProductList/product-list.component';
 
-function Home() {
+const Home = () => {
   return (
     <Fragment>
         <Header />

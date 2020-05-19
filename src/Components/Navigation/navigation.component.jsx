@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
-import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';

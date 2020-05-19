@@ -21,19 +21,19 @@ export default [
         image: e33c,
         gallery: [e33c, e33c, e33c],
         description: `
-        Brand Name: Eachine\n
-        Item NO.: E33C\n
-        Frequency: 2.4G\n
-        Channel: 4ch\n
-        G-yro: 6 axis\n
-        Motor: 0720 Coreless Motor\n
-        Take-off Weight: about 120g\n
-        Quadcopter Battery: 3.7V 500mAh Lipo (Included)\n
-        Transmitter Battery:3 x 1.5 AA battery (NOT Included)\n
-        Charging time: 60-70mins\n
-        Flying time: 7-9mins\n
-        R/C distance: 80-100m\n
-        FPV Range: about 30m\n         
+        Brand Name: Eachine
+        Item NO.: E33C
+        Frequency: 2.4G
+        Channel: 4ch
+        G-yro: 6 axis
+        Motor: 0720 Coreless Motor
+        Take-off Weight: about 120g
+        Quadcopter Battery: 3.7V 500mAh Lipo (Included)
+        Transmitter Battery:3 x 1.5 AA battery (NOT Included)
+        Charging time: 60-70mins
+        Flying time: 7-9mins
+        R/C distance: 80-100m
+        FPV Range: about 30m       
         Color: Black`
     },
     {

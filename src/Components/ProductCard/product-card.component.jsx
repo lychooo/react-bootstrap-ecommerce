@@ -6,18 +6,17 @@ import PropTypes from 'prop-types';
 
 import './product-card.styles.css';
 
-const ProductCard = ({ product: { id, title, price, brand, image } }) => (
+const ProductCard = ({ product: { id, title, price, image } }) => (
     
         <div className="product-card">
-            <Card className="product-card" style={{ width: '12rem' }}>
-
+            <Card className="product-card">
                 <LinkContainer to={`/eachine/${id}`}>
                     <Card.Img variant="top" src={image} />
                 </LinkContainer>
 
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>
-                    <Card.Text> <span className='product-card-page'>${price}</span></Card.Text>
+                    <Card.Text> <span className='product-price-card-page'>${price}</span></Card.Text>
                     <LinkContainer to={`/eachine/${id}`}>
                         <Button variant="primary">Details</Button>
                     </LinkContainer>

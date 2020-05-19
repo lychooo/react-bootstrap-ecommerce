@@ -1,9 +1,15 @@
 .product-card {
     margin: 0.25em;
     box-shadow: 1px 1px 4px 1px rgba(153, 153, 153, .2);
+    width: 12rem;
+    height: 24rem;
 }
 
-.product-card-page {
+.card-title {
+    font-size: calc(12px + 1vmin);
+}
+
+.product-price-card-page {
     color: rgb(240, 58, 58);
     font-weight: bold;
     font-size: calc(12px + 1.5vmin);
@@ -13,10 +19,16 @@
     cursor: pointer;
 }
 
+@media (max-width: 900px) {
+    .product-card {
+        width: 10rem;
+    }
+}
+
 @media (max-width: 600px) {
     .product-card {
         margin: 0.25em;
-        max-width: 150px;
+        height: 21rem;
     }
 
     .btn {
