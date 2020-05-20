@@ -3,15 +3,17 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const config = {
-    apiKey: "AIzaSyA-lQKBZTVcM1dAFBDECXegwvQZ1t6CSG8",
-    authDomain: "ecommerce-db-4629c.firebaseapp.com",
-    databaseURL: "https://ecommerce-db-4629c.firebaseio.com",
-    projectId: "ecommerce-db-4629c",
-    storageBucket: "ecommerce-db-4629c.appspot.com",
-    messagingSenderId: "504414870901",
-    appId: "1:504414870901:web:0abbb346e1fa309891c73c",
-    measurementId: "G-QR414BEQ1B"
+    apiKey: "XXXXXXXXXXXXXXXXXX",
+    authDomain: "XXXXXXXXXXXXXXXXXX",
+    databaseURL: "XXXXXXXXXXXXXXXXXX",
+    projectId: "XXXXXXXXXXXXXXXXXX",
+    storageBucket: "XXXXXXXXXXXXXXXXXX",
+    messagingSenderId: "XXXXXXXXXXXXXXXXXX",
+    appId: "XXXXXXXXXXXXXXXXXX",
+    measurementId: "XXXXXXXXXXXXXXXXXX"
 };
+
+firebase.initializeApp(config);
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
     if (!userAuth) return;
@@ -39,8 +41,6 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 
     return userRef;
 }
-
-firebase.initializeApp(config);
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
